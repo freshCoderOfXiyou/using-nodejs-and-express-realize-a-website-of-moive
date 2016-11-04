@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+  .container
+    .row
+      each item in movies
+        .col-md-2
+        .thumbnail
+          a(hre='/movies/#{item._id}')
+          img(src='#{item.posterkey}',alt='#{item.title}')
+          caption 
+            h3  #{title}
+            p a .btn .btn-primary (href='movies/#{item.id}' role='button')
